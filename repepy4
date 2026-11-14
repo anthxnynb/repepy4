@@ -1,0 +1,14 @@
+numero = int(input("Ingrese un numero decimal: "))
+
+digitos = "0123456789ABCDEF"
+hexadecimal = ""
+
+if numero == 0:
+    hexadecimal = "0"
+else:
+    while numero > 0:
+        residuo = numero % 16
+        hexadecimal = digitos[residuo] + hexadecimal
+        numero = numero // 16
+
+print("El numero hexadecimal es:", hexadecimal)
